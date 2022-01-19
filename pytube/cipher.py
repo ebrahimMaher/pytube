@@ -30,7 +30,7 @@ class Cipher:
         var_regex = re.compile(r"^\$*\w+\W")
         var_match = var_regex.search(self.transform_plan[0])
         if not var_match:
-            raise RegexMatchError(var_regex = re.compile(r"^\$*\w+\W")
+            raise RegexMatchError(
                 caller="__init__", pattern=var_regex.pattern
             )
         var = var_match.group(0)[:-1]
